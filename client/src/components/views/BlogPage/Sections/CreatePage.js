@@ -2,12 +2,23 @@ import React, { useState, useEffect } from 'react';
 import { Typography, Button, Form, message } from 'antd';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
-
+import QuillEditor from '../../../editor/QuillEditor';
 const { Title } = Typography;
 
 function CreatePage() {
   const user = useSelector(state => state.user);
+
   const [content, setContent] = useState('');
+  const [files, setFiles] = useState([]);
+
+  const onEditorChange = value => {
+    setContent(value);
+    console.log(value);
+  };
+
+  const onFilesChange = files => {
+    setFiles(files);
+  };
 
   const onSubmit = event => {
     event.preventDefault();
@@ -31,11 +42,11 @@ function CreatePage() {
           <Title level={2}> Editor </Title>
         </div>
 
-        {/* <QuillEditor
+        <QuillEditor
           placeholder={'Start Posting'}
           onEditorChange={onEditorChange}
           onFilesChange={onFilesChange}
-        /> */}
+        />
 
         <Form onSubmit={onSubmit}>
           <div style={{ textAlign: 'center', margin: '2rem' }}>
