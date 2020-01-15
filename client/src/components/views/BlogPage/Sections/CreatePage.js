@@ -33,7 +33,9 @@ function CreatePage() {
       content: content,
       userID: user.userData._id
     };
-    axios.post('api/blog/createPost', variables).then();
+    axios.post('/api/blog/createPost', variables).then(response => {
+      console.log(response);
+    });
   };
   return (
     <div>
