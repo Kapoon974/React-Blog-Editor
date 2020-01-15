@@ -121,7 +121,7 @@ class FileBlot extends BlockEmbed {
     prefixTag.innerText = '첨부파일 - ';
 
     const bTag = document.createElement('b');
-    //위에 첨부파일 글자 옆에  파일 이름이 b 태그를 사용해서 나온다.
+
     bTag.innerText = value;
 
     const linkTag = document.createElement('a');
@@ -129,7 +129,6 @@ class FileBlot extends BlockEmbed {
     linkTag.setAttribute('target', '_blank');
     linkTag.setAttribute('className', 'file-link-inner-post');
     linkTag.appendChild(bTag);
-    //linkTag 이런식으로 나온다 <a href="btn_editPic@3x.png" target="_blank" classname="file-link-inner-post"><b>btn_editPic@3x.png</b></a>
 
     const node = super.create();
     node.appendChild(prefixTag);
