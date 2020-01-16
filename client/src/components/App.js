@@ -10,7 +10,7 @@ import Footer from './views/Footer/Footer';
 
 import PostPage from './views/PostPage/PostPage';
 import BlogPage from './views/BlogPage/BlogPage';
-import CreatePage from './views/BlogPage/Sections/CreatePage';
+import CreateBlogPage from './views/BlogPage/Section.js/CreatePage';
 
 function App() {
   return (
@@ -21,14 +21,17 @@ function App() {
           <Route exact path="/" component={Auth(LandingPage, null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
+          <Route exact path="/blog" component={Auth(BlogPage, null)} />
+          <Route
+            exact
+            path="/blog/create"
+            component={Auth(CreateBlogPage, null)}
+          />
           <Route
             exact
             path="/blog/post/:postId"
             component={Auth(PostPage, null)}
           />
-          <Route exact path="/blog" component={Auth(BlogPage, true)} />
-          <Route exact path="/blog/create" component={Auth(CreatePage, null)} />
-          s
         </Switch>
       </div>
       <Footer />
