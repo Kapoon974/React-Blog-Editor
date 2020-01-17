@@ -2,13 +2,15 @@ React Text Editor Project
 
 To use this application,
 
-1. make dev.js file inside config folder
-2. put mongoDB application info into dev.js file - account email and password in api string
-3. Type " npm install " inside the root directory (main folder) -- Download Server Dependencies
-4. Type " npm install " inside the client directory (client folder) -- Download Front-end Dependencies
-5. To run the application you can write "npm run dev"
+1. Create dev.js file inside config folder
+2. Put mongoDB connection info into dev.js file - account and password
+3. Type " npm install " inside the root directory (main folder)
+4. Type " npm install " inside the client directory (client folder)
+5. Run command : "npm run dev"
 
-Technology being used for the application :
+Technologies being used for the application :
 
-1. ReactJS
-2. Quill Component - Creates online editor
+MERN Stack (Mongoose, Express, React and Node.js)
+ReactJS
+Quill Editor
+MongoDB
